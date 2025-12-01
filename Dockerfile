@@ -10,3 +10,5 @@ COPY . .
 EXPOSE 8080
 
 CMD ["python", "src/app.py"]
+
+EXPOSE 9090

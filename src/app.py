@@ -1,3 +1,23 @@
+import logging
+import sys
+from prometheus_client import start_http_server, Counter
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+logger = logging.getLogger("sales-app")
+
+APP_STARTS = Counter('app_startups_total', 'Total number of times the app has started')
+APP_STARTS.inc()
+
+try:
+    start_http_server(9090)
+    logger.info("Metrics server started on port 9090")
+except Exception as e:
+    logger.warning(f"Metrics server issue: {e}")
+
 from flask import Flask, jsonify, render_template
 from data_loader import (
     load_data,
