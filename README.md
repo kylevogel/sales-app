@@ -70,5 +70,5 @@ Alerting: Add logic to trigger alerts if error rates spike.
 
 7. Links
 
-GitHub Repo: https://github.com/aelias5438/sales-app
+GitHub Repo: https://github.com/kylevogel/sales-app/
 Public Cloud App: https://kylev3-sales-app.azurewebsites.net/
