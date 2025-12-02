@@ -25,6 +25,8 @@ Data/Models/Services:
 Source: Local sales datasets located in the src/ directory.
 Format: Python-based application serving data via HTTP.
 License: MIT License (Open Source).
+
+
 3) How to Run (Local)
 This application is containerized using Docker. Follow these steps to build and run the application locally.
 Prerequisites:
